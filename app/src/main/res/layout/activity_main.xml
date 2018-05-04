@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.didiervaldez.testraspberry.MainActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        style="@style/Base.TextAppearance.AppCompat.Display1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Control Remoto" />
+
+    <Switch
+        android:id="@+id/emergencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/titulo"
+        android:text="Emergencia" />
+
+    <TextView
+        android:id="@+id/label_acelerador"
+        style="@style/Base.TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/acelerador"
+        android:layout_centerHorizontal="true"
+        android:text="Acelerador" />
+
+    <SeekBar
+        android:id="@+id/acelerador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/label_valor_aceleracion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
+
+    <TextView
+        android:id="@+id/label_valor_aceleracion"
+        style="@style/Base.TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_avanzar"
+        android:layout_centerHorizontal="true"
+        android:text="" />
+
+    <Button
+        android:id="@+id/button_avanzar"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_izquierdo"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@android:color/black"
+        android:text="AVANZAR"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/button_izquierdo"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:background="@android:color/black"
+        android:text="GIRAR IZQUIERDA"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/button_derecho"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:background="@android:color/black"
+        android:text="GIRAR DERECHA"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/button_reversa"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_derecho"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@android:color/black"
+        android:text="REVERSA"
+        android:textColor="@android:color/white" />
+
+
+    <Button
+        android:id="@+id/button_encendido"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:drawableTop="@drawable/ic_power_settings_new_white_48dp"
+        android:text="Encender"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/footer"
+        style="@style/Base.TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Raspberry Pi 2018©. Equipo: Undefined_v2.0®" />
+
+
+</RelativeLayout>
