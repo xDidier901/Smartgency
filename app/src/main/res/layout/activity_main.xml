@@ -21,7 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/titulo"
-        android:text="Emergencia" />
+        android:text="Emergencia"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/label_acelerador"

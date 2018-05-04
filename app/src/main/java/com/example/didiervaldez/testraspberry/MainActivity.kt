@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         setButtonListeners()
     }
 
+    //Inicializa valores de seek bar
     private fun initializeComponents() {
         button_encendido.setBackgroundColor(Color.rgb(17, 173, 64))
         button_encendido.text = "Encender"
@@ -41,18 +42,21 @@ class MainActivity : AppCompatActivity() {
         label_valor_aceleracion.text = "Potencia: ${acelerador.progress.toString()}"
     }
 
+    //Formate el boton de un color al ser presionado
     private fun formatButtonDown(button: Button) {
         button.backgroundColor = Color.BLUE
         button.typeface = boldTypeface
         checkIfEmergency()
     }
 
+    //Formatea el color de un boton al ser soltado (después de ser presionado)
     private fun formatButtonUp(button: Button) {
         button.backgroundColor = Color.DKGRAY
         button.typeface = normalTypeface
-        checkIfEmergency()
+//        checkIfEmergency()
     }
 
+    //Deshabilitado por el momento
     private fun checkIfEmergency() {
         if (emergencia.isChecked) {
             Background_get().execute("emergencia=1")
@@ -61,6 +65,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //Si el carro está encendido, habilita los botones.
     private fun enableButtons() {
         if (isOn) {
             button_avanzar.isEnabled = true
@@ -91,6 +96,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //Establece los listeners para el seek bar y los botones de dirección
     private fun setButtonListeners() {
 
         acelerador.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
